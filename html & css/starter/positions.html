@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning Example</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background-color: #f0f0f0;
+        overflow: auto;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(52, 152, 219, 0.5);
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+      }
+
+      .static {
+        position: static;
+      }
+
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+
+      .stickyContainer {
+        border: 1px solid black;
+        height: 500px; /* Fixed height for the sticky container */
+        overflow: auto;
+        position: relative;
+        margin-bottom: 800px;
+      }
+      .sticky1 {
+        position: sticky;
+        top: 20px;
+        left: 340px;
+        background-color: #e74c3c;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 20px;
+        background-color: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box static">Static</div>
+      <div class="box relative">Relative</div>
+      <div class="box absolute">Absolute</div>
+      <div class="box fixed">Fixed</div>
+      <div class="box sticky">Sticky</div>
+      <div class="stickyContainer">
+        <div class="box sticky1">Sticky</div>
+      </div>
+    </div>
+    <p>
+      Scroll down to see the effect of sticky positioning within the sticky
+      container.
+    </p>
+  </body>
+</html>
